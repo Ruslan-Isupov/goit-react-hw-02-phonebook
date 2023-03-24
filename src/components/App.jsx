@@ -34,8 +34,9 @@ export class App extends Component {
   };
 
   render() {
-    const valueFilter = this.state.contacts.filter(contact =>
-      contact.name.toLowerCase().includes(this.state.filter.toLowerCase())
+    const { contacts, filter } = this.state;
+    const valueFilter = contacts.filter(contact =>
+      contact.name.toLowerCase().includes(filter.toLowerCase())
     );
 
     return (
@@ -44,14 +45,11 @@ export class App extends Component {
         <ContactForm
           submitForm={this.formSubmitHandler}
           check={this.checkSameName}
-          contacts={this.state.contacts}
+          contacts={contacts}
         />
 
         <h2>Contacts</h2>
-        <Filter
-          valueFilter={this.state.filter}
-          inputFilter={this.changeFilter}
-        />
+        <Filter valueFilter={filter} inputFilter={this.changeFilter} />
         <ContactList contacts={valueFilter} del={this.deleteContact} />
       </>
     );

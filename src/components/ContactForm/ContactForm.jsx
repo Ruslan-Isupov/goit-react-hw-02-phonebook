@@ -14,14 +14,11 @@ export class ContactForm extends Component {
   };
   addContact = e => {
     e.preventDefault();
-    if (this.props.contacts.length === 0) {
-      this.props.submitForm(this.state);
-    } else {
-      this.props.check(this.state.name) === undefined
-        ? this.props.submitForm(this.state)
-        : alert('This name exists yet');
-    }
-    
+
+    this.props.check(this.state.name) === undefined
+      ? this.props.submitForm(this.state)
+      : alert('This name exists yet.Try again!');
+
     this.resetForm();
   };
   resetForm = () => {

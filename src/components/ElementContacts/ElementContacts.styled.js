@@ -5,7 +5,6 @@ export const ButtonItem = styled.button`
   color: rgb(77, 77, 77);
   border-radius: 10%;
   border: 2px solid rgba(255, 143, 236, 0.637);
-  box-shadow: 2px 2px 2px gray;
 
   &:hover {
     background-color: rgba(247, 101, 222, 0.637);

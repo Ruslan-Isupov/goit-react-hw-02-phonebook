@@ -9,13 +9,14 @@ export const FieldSet = styled.fieldset`
   background-color: rgb(226, 226, 238);
 `;
 export const ContactButton = styled.button`
-  display: inline-block;
+  display: block;
+  width: 150px;
+  margin: 0 auto;
   padding: 10px 15px;
   background-color: rgb(201, 201, 248);
   color: rgb(77, 77, 77);
   border-radius: 10%;
-  border: 2px solid rgb(206, 206, 248);
-  box-shadow: 2px 2px 2px gray;
+  border: 4px solid rgb(206, 206, 248);
 
   &:hover {
     background-color: rgb(205, 205, 248);
